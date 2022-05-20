@@ -1,0 +1,424 @@
+/*--------------------------------------------------------------------------------------*/
+/* Defino el GRID                                                                       */
+/*--------------------------------------------------------------------------------------*/
+
+.container { 
+    display: grid;
+
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas:    "header header header"
+                            "subTitulo subTitulo subTitulo"
+                            "linea linea linea"
+                            "detalle detalle detalle"
+                            "izq imagen_c der"
+                            "izq imagen_c der"
+                            "izq imagen_c der";
+    
+    grid-template-rows:  200px 50px 20px 100px 40px 100px 100px;  
+    grid-template-columns: 33% 33% 34%;  
+    /* grid-gap: 1px;       */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid grey;  
+    margin: 1%;       
+    text-align: center;  
+    background-color: rgb(51, 49, 49);
+    color: white;    
+
+}         
+
+
+/*---------------------------------------------------------------------*/
+/* Defino cada area del grid                                           */
+/*---------------------------------------------------------------------*/
+.header         { grid-area: header;  }
+.subTitulo      { grid-area: subTitulo; }
+.linea          {grid-area: linea; }
+.detalle        {grid-area: detalle; }
+.izq            {grid-area: izq; }
+.der            {grid-area: der;  }
+.imagen_c       {grid-area: imagen_c; }
+
+/*----------------------------------------------------------------*/
+/* Defino el nombre y propiedades de cada area del grid           */
+/*----------------------------------------------------------------*/
+
+.header {
+    background-color: black;
+    font-size: 16px; 
+    padding-top: 0px; 
+  }  
+
+.subTitulo {
+    font-size: 22px; 
+    align-self: center; 
+    padding-top: 5px;
+}
+
+.detalle {
+    font-size: 18px; 
+    align-self: center; 
+}
+
+ .izq {
+    text-align: right;
+ }
+
+ .der{
+     text-align: left;
+}
+
+.linea {
+    background-color: brown;
+    width: 80%;
+    justify-self: center;
+    margin-top: 19px;
+
+}
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 200 - 400 px                     */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 200px)  and  (max-width: 400px) {
+    .container {
+        /* Uso un atajo para definir filas / columnas */
+        grid-template-rows:  110px 40px 20px 80px 140px 200px 140px;  
+        grid-template-columns:  40% 60%; 
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas:    "header header"
+                                "subTitulo subTitulo" 
+                                "linea linea"
+                                "detalle detalle"
+                                "izq izq"
+                                "imagen_c imagen_c"
+                                "der der";                   
+    }
+
+
+    .header {
+        background-color: black;
+        font-size: 8px; 
+        padding-top: 2px;
+      }  
+    
+    .subTitulo {
+        font-size: 9px; 
+        align-self: center; 
+
+    }
+    
+    .detalle {
+        font-size: 8px; 
+        align-self: center; 
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+           
+    .der{
+        align-self: center;
+    }
+
+    .izq {
+        padding-top: 5px;
+    }
+
+    .izq, .der{
+        font-size: 7.5px;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .linea {
+        background-color: brown;
+        width: 50%;
+        justify-self: center;
+        margin-top: 19px;  
+    }
+
+    .imagen_c{
+        align-self: center;
+       
+    }
+}
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 400 - 600 px                     */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 400px)  and  (max-width: 600px) {
+    .container {
+         /* Uso un atajo para definir filas / columnas */
+         grid-template-rows:  110px 40px 20px 80px 120px 250px 120px;  
+         grid-template-columns:  40% 60%; 
+ 
+         /* Distribuimos el contenido en cada fila */
+         grid-template-areas:    "header header"
+                                 "subTitulo subTitulo" 
+                                 "linea linea"
+                                 "detalle detalle"
+                                 "izq izq"
+                                 "imagen_c imagen_c"
+                                 "der der";                   
+     }
+
+     
+    .header {
+        background-color: black;
+        font-size: 8px; 
+        padding-top: 2px;
+      }  
+    
+    .subTitulo {
+        font-size: 9px; 
+        align-self: center; 
+        /* padding-top: 10px; */
+    }
+    
+    .detalle {
+        font-size: 8px; 
+        align-self: center; 
+        padding-top: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+           
+    .der{
+        align-self: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .izq {
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .izq, .der{
+        font-size: 7.5px;
+        text-align: center;
+    }
+
+    .linea {
+        background-color: brown;
+        width: 50%;
+        justify-self: center;
+        margin-top: 19px;  
+    }
+
+    .imagen_c{
+        align-self: center;
+       
+    }
+}
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 600 - 800px                      */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 600px)  and  (max-width: 800px) {
+    .container {
+        /* Uso un atajo para definir filas / columna */
+
+    grid-template-areas:    "header header header"
+                            "subTitulo subTitulo subTitulo"
+                            "linea linea linea"
+                            "detalle detalle detalle"
+                            "izq imagen_c der"
+                            "izq imagen_c der"
+                            "izq imagen_c der";
+    
+    grid-template-rows:  110px 30px 20px 50px 80px 80px 80px;  
+    grid-template-columns: 33% 33% 34%;  
+
+}
+
+
+.header {
+    background-color: black;
+    font-size: 8px; 
+    padding-top: 2px;
+  }  
+
+.subTitulo {
+    font-size: 9px; 
+    align-self: center; 
+    /* padding-top: 10px; */
+}
+
+.detalle {
+    font-size: 8px; 
+    align-self: center; 
+    padding-left: 20px;
+    padding-right: 20px;
+}
+       
+.der{
+    text-align: left;
+    padding-right: 10px;
+    
+}
+
+.izq {
+    text-align: right;
+    padding-left: 10px;
+}
+
+.izq, .der{
+    font-size: 8px;
+    align-self: center;
+}
+
+.linea {
+    background-color: brown;
+    width: 50%;
+    justify-self: center;
+    margin-top: 19px;  
+}
+
+.imagen_c{
+    align-self: center;
+   
+}
+}
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 800 - 1000px                      */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 800px)  and  (max-width: 1000px) {
+    .container {
+        /* Uso un atajo para definir filas / columna */
+
+    grid-template-areas:    "header header header"
+                            "subTitulo subTitulo subTitulo"
+                            "linea linea linea"
+                            "detalle detalle detalle"
+                            "izq imagen_c der"
+                            "izq imagen_c der"
+                            "izq imagen_c der";
+    
+    grid-template-rows:  180px 60px 20px 100px 100px 100px 100px;  
+    grid-template-columns: 34% 33% 33%;  
+
+}
+
+
+.header {
+    background-color: black;
+    font-size: 15px; 
+    padding-top: 2px;
+  }  
+
+.subTitulo {
+    font-size: 18px; 
+    align-self: center; 
+    /* padding-top: 10px; */
+}
+
+.detalle {
+    font-size: 15px; 
+    align-self: center; 
+    padding-left: 15px;
+    padding-right: 15px;
+}
+       
+.der{
+    text-align: left;
+    padding-right: 15px;
+    
+}
+
+.izq {
+    text-align: right;
+    padding-left: 15px;
+}
+
+.izq, .der{
+    font-size: 12px;
+    align-self: center;
+}
+
+.linea {
+    background-color: brown;
+    width: 50%;
+    justify-self: center;
+    margin-top: 19px;  
+}
+
+.imagen_c{
+    align-self: center;
+   
+}
+}
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 1000 - 1400px                      */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 1000px)  and  (max-width: 1400px) {
+    .container {
+        /* Uso un atajo para definir filas / columna */
+
+    grid-template-areas:    "header header header"
+                            "subTitulo subTitulo subTitulo"
+                            "linea linea linea"
+                            "detalle detalle detalle"
+                            "izq imagen_c der"
+                            "izq imagen_c der"
+                            "izq imagen_c der";
+    
+    grid-template-rows:  180px 60px 20px 100px 100px 100px 100px;  
+    grid-template-columns: 34% 33% 33%;  
+
+}
+
+
+.header {
+    background-color: black;
+    font-size: 15px; 
+    padding-top: 2px;
+  }  
+
+.subTitulo {
+    font-size: 18px; 
+    align-self: center; 
+    /* padding-top: 10px; */
+}
+
+.detalle {
+    font-size: 18px; 
+    align-self: center; 
+    padding-left: 15px;
+    padding-right: 15px;
+}
+       
+.der{
+    text-align: left;
+    padding-right: 15px;
+    
+}
+
+.izq {
+    text-align: right;
+    padding-left: 15px;
+}
+
+.izq, .der{
+    font-size: 15px;
+    align-self: center;
+}
+
+.linea {
+    background-color: brown;
+    width: 50%;
+    justify-self: center;
+    margin-top: 19px;  
+}
+
+.imagen_c{
+    align-self: center;
+   
+}
+}

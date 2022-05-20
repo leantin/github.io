@@ -1,0 +1,458 @@
+/*--------------------------------------------------------------------------------------*/
+/* Defino el GRID                                                                       */
+/*--------------------------------------------------------------------------------------*/
+
+.container { 
+    display: grid;
+
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas:    "header header"
+                            "header1 header1"
+                            "izq_dire der_dire"
+                            "izq_linea der_linea"
+                            "izq_mapa der_mapa";
+                            
+                            
+    
+    grid-template-rows:  90px 20px 150px 20px 400px;  
+    grid-template-columns: 50% 50%;  
+    /* grid-gap: 1px;       */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid grey;  
+    margin: 1%;       
+    text-align: center;  
+    background-color: rgb(51, 49, 49);
+    color: white;
+
+}         
+
+
+/*---------------------------------------------------------------------*/
+/* Defino cada area del grid                                           */
+/*---------------------------------------------------------------------*/
+.header         {grid-area: header;  }
+.izq_dire       {grid-area: izq_dire; }
+.der_dire       {grid-area: der_dire; }
+.izq_mapa       {grid-area: izq_mapa; }
+.der_mapa       {grid-area: der_mapa; }
+.izq_linea      {grid-area: izq_linea; }
+.der_linea      {grid-area: der_linea; }
+
+/*----------------------------------------------------------------*/
+/* Defino el nombre y propiedades de cada area del grid           */
+/*----------------------------------------------------------------*/
+
+.header {
+    background-color: black;
+    font-size: 20px; 
+    padding-top: 5px; 
+  }  
+
+.header1 {
+    background-color: black;
+}
+
+
+.izq_dire, .der_dire {
+    justify-self: center;
+}
+
+.izq_linea, .der_linea {
+    background-color: brown;
+    width: 30%;
+    justify-self: center;
+    margin-top: 19px;
+
+}
+
+.izq_mapa, .der_mapa {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    
+}
+.izq_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 180px;
+    width: 50%;
+    height: 50%;
+ 
+}
+
+.der_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 180px;
+    width: 50%;
+    height: 50%;
+}
+
+
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 400 - 600px                     */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 400px)  and  (max-width: 600px) {
+    .container {
+        /* Uso un atajo para definir filas / columna */
+
+        /* Distribuimos el contenido en cada fila */
+                grid-template-areas:    "header"
+                                        "izq_dire"
+                                        "izq_mapa"
+                                        "izq_linea" 
+                                        "der_dire"
+                                        "der_mapa";
+                                        
+                    grid-template-rows:  80px 100px 220px 20px 100px 220px;  
+                    grid-template-columns: 100%;  
+
+}
+
+
+.header {
+    background-color: black;
+    font-size: 10px; 
+    padding-top: 5px; 
+  }  
+
+.header1 {
+    background-color: black;
+}
+
+
+.izq_dire, .der_dire {
+    justify-self: center;
+    align-self: center;
+    font-size: 12px;
+    padding-top: 60px;
+}
+
+.izq_linea, .der_linea {
+    background-color: brown;
+    width: 30%;
+    justify-self: center;
+    margin-top: 19px;
+
+}
+
+.izq_mapa, .der_mapa {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    
+}
+.izq_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 105px;
+    width: 50%;
+    height: 50%;
+ 
+}
+
+.der_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 105px;
+    width: 50%;
+    height: 50%;
+}
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 600 - 800px                     */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 600px)  and  (max-width: 800px) {
+    .container {
+        /* Uso un atajo para definir filas / columna */
+
+        /* Distribuimos el contenido en cada fila */
+                grid-template-areas:    "header header"
+                                        "header1 header1"
+                                        "izq_dire der_dire"
+                                        "izq_linea der_linea"
+                                        "izq_mapa der_mapa";
+                                        
+                                        
+
+                    grid-template-rows:  90px 20px 140px 20px 300px;  
+                    grid-template-columns: 50% 50%;  
+
+}
+
+
+.header {
+    background-color: black;
+    font-size: 15px; 
+    padding-top: 5px; 
+  }  
+
+.header1 {
+    background-color: black;
+}
+
+
+.izq_dire, .der_dire {
+    justify-self: center;
+    font-size: 12px;
+}
+
+.izq_linea, .der_linea {
+    background-color: brown;
+    width: 30%;
+    justify-self: center;
+    margin-top: 19px;
+
+}
+
+.izq_mapa, .der_mapa {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    
+}
+.izq_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 80px;
+    width: 50%;
+    height: 50%;
+ 
+}
+
+.der_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 80px;
+    width: 50%;
+    height: 50%;
+}
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 800 - 1000px                     */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 800px)  and  (max-width: 1000px) {
+    .container {
+        /* Uso un atajo para definir filas / columna */
+
+        /* Distribuimos el contenido en cada fila */
+                grid-template-areas:    "header header"
+                                        "header1 header1"
+                                        "izq_dire der_dire"
+                                        "izq_linea der_linea"
+                                        "izq_mapa der_mapa";
+                                        
+                                        
+
+                    grid-template-rows:  90px 20px 170px 20px 300px;  
+                    grid-template-columns: 50% 50%;  
+
+}
+
+
+.header {
+    background-color: black;
+    font-size: 20px; 
+    padding-top: 5px; 
+  }  
+
+.header1 {
+    background-color: black;
+}
+
+
+.izq_dire, .der_dire {
+    justify-self: center;
+    font-size: 14px;
+}
+
+.izq_linea, .der_linea {
+    background-color: brown;
+    width: 30%;
+    justify-self: center;
+    margin-top: 19px;
+
+}
+
+.izq_mapa, .der_mapa {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    
+}
+.izq_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 105px;
+    width: 50%;
+    height: 50%;
+ 
+}
+
+.der_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 105px;
+    width: 50%;
+    height: 50%;
+}
+}
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 1000 - 1200px                     */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 1000px)  and  (max-width: 1200px) {
+    .container {
+        /* Uso un atajo para definir filas / columna */
+
+        /* Distribuimos el contenido en cada fila */
+                grid-template-areas:    "header header"
+                                        "header1 header1"
+                                        "izq_dire der_dire"
+                                        "izq_linea der_linea"
+                                        "izq_mapa der_mapa";
+                                        
+                                        
+
+                    grid-template-rows:  90px 20px 170px 20px 300px;  
+                    grid-template-columns: 50% 50%;  
+
+}
+
+
+.header {
+    background-color: black;
+    font-size: 20px; 
+    padding-top: 5px; 
+  }  
+
+.header1 {
+    background-color: black;
+}
+
+
+.izq_dire, .der_dire {
+    justify-self: center;
+    font-size: 14px;
+}
+
+.izq_linea, .der_linea {
+    background-color: brown;
+    width: 30%;
+    justify-self: center;
+    margin-top: 19px;
+
+}
+
+.izq_mapa, .der_mapa {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    
+}
+.izq_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 120px;
+    width: 50%;
+    height: 50%;
+ 
+}
+
+.der_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 120px;
+    width: 50%;
+    height: 50%;
+}
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 1200 - 1400px                     */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 1200px)  and  (max-width: 1400px) {
+    .container {
+        /* Uso un atajo para definir filas / columna */
+
+        /* Distribuimos el contenido en cada fila */
+                grid-template-areas:    "header header"
+                                        "header1 header1"
+                                        "izq_dire der_dire"
+                                        "izq_linea der_linea"
+                                        "izq_mapa der_mapa";
+                                        
+                                        
+
+                    grid-template-rows:  90px 20px 170px 20px 300px;  
+                    grid-template-columns: 50% 50%;  
+
+}
+
+
+.header {
+    background-color: black;
+    font-size: 20px; 
+    padding-top: 5px; 
+  }  
+
+.header1 {
+    background-color: black;
+}
+
+
+.izq_dire, .der_dire {
+    justify-self: center;
+    font-size: 14px;
+}
+
+.izq_linea, .der_linea {
+    background-color: brown;
+    width: 30%;
+    justify-self: center;
+    margin-top: 19px;
+
+}
+
+.izq_mapa, .der_mapa {
+    position: relative;
+    padding-bottom: 75%;
+    padding-left: 30%;
+    height: 0;
+    overflow: hidden;
+    
+}
+.izq_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 150px;
+    width: 50%;
+    height: 50%;
+ 
+}
+
+.der_mapa iframe {
+    position: absolute;
+    top: 35px;
+    left: 150px;
+    width: 50%;
+    height: 50%;
+}
+}
+

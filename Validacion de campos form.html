@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/TP final_contacto.css" />
+    <link rel="icon" href="/img/Contacto.ico"/>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"/>
+       
+  </head>
+  <h1>¡Contactanos!</h1>
+   
+  <body>
+    <div class="container">
+     
+      <form action="#" id="form" name="form" class="flex-outer">
+        
+         <!-- /** 
+          * ! Ingreso del Nombre y Apellido
+         **/ -->
+
+        <div>
+          <label for="nombre">Nombre y Apellido</label>
+          <i class="fas fa-user"></i>
+          <input type="text" name="nombre" id="nombre" value="" />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+                
+        <div>
+          <label for="email">Email</label>
+          <i class="far fa-envelope"></i>
+          <input type="email" name="email" id="email" value=""/>
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+        
+         <!-- /** 
+          * ! Ingreso de Empresa
+         **/ -->
+
+        <div>
+            <label for="emprea">Empresa</label>
+            <i class="fas fa-id-card"></i>
+            <input type="text" name="empresa" id="empresa" value=""/>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+        
+
+             <!-- /** 
+          * ! Ingreso de Web de la Empresa
+         **/ -->
+
+        <div>
+            <label for="web">Web de la Empresa</label>
+            <i class="fas fa-thumbs-up"></i>
+            <input type="text" name="web" id="web" value=""/>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+        
+                  <!-- /** 
+          * ! Ingreso de Región / Pais
+         **/ -->
+
+        <div>
+            <label for="pais">Región / País</label>
+            <div>
+                <select name="pais" id="pais" class = "control-select">
+                    <option selected="" value="Default">Seleccionar ...</option>
+                    <optgroup label="Sudamérica">
+                        <option value="Argentina">Argentina</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Perú">Peru</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Venezuela">Venezuela</option>
+                    </optgroup>
+                    <optgroup label="Norteamérica">
+                        <option value="Canadá">Canadá</option>
+                        <option value="EEUU">EEUU</option>
+                        <option value="Néxico">Mexico</option>
+                    </optgroup>
+                    <optgroup label="América Central">
+                        <option value="Costa Rica">CostaRica</option>
+                        <option value="Néxico">Mexico</option>
+                        <option value="Panamá">EEUU</option>
+                    </optgroup>
+                    <optgroup label="Europa">
+                        <option value="Alemania">Alemania</option>
+                        <option value="España">Francia</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Italia">Italia</option>
+                        <option value="ReinoUnido">Reino Unido</option>
+                    </optgroup>
+                    <optgroup label="Asia Pacífico">
+                        <option value="China">China</option>
+                        <option value="Japón">Japon</option>
+                        <option value="Rusia">Rusia</option>
+                    </optgroup>
+                    <optgroup label="Oceanía">
+                        <option value="Australia">Australia</option>
+                        <option value="NuevaZelanda">Nueva Zelanda</option>
+                    </optgroup>
+                </select> 
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>   
+                <div class="error"></div> 
+                <br>        
+            </div>
+        </div>
+         
+
+                <!-- /** 
+          * ! Ingreso de Mensaje
+         **/ -->
+
+        <div>
+            <label for="mensaje">Mensaje</label>
+            <i class="fas fa-edit"></i>
+            <textarea  type="text"  name="mensaje" id="mensaje" value=" " minlength="50" maxlength="300"></textarea>
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="far fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+
+
+        <button type="submit" id="submit">Enviar</button>
+        <br>
+        <a href="index.html"><b>Volver</b></a> 
+        
+      </form>
+      
+    </div>
+  </body>
+  <script src="/js/TP final_contacto.js"></script>
+</html>

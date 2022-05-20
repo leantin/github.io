@@ -1,0 +1,425 @@
+/*--------------------------------------------------------------------------------------*/
+/* Defino el GRID                                                                       */
+/*--------------------------------------------------------------------------------------*/
+
+.container { 
+    display: grid;
+
+    
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas:     "header header1 header1 header1 header1 header1 boton2 boton3 boton4 boton5 boton6"
+                             "nav nav nav nav imagen imagen imagen imagen imagen imagen imagen" 
+                             "nav nav nav nav imagen imagen imagen imagen imagen imagen imagen" 
+                             "footer footer footer footer footer footer footer footer footer footer footer"  
+    ;
+
+    grid-template-rows:  15% 62% 18%;  
+    grid-template-columns: 2% repeat(8, 10%)  8%;  
+    /* grid-gap: 1px;      */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* border: 2px solid grey;   */
+    margin: 1%;       
+    color: black;  
+    background-color: rgb(12, 25, 41);  
+    text-align: center;  
+    /* height: 75vh; */
+    /*height: 93vh;*/
+    
+
+}         
+
+
+/*----------------------------------------------------------------*/
+/* Defino cada area del grid                                      */
+/*----------------------------------------------------------------*/
+#pageHeader { grid-area: header;}
+#pageHeader1 { grid-area: header1;}
+#pageBoton2 { grid-area: boton2;}
+#pageBoton3 { grid-area: boton3;}
+#pageBoton4 { grid-area: boton4;}
+#pageBoton5 { grid-area: boton5;}
+#pageBoton6 { grid-area: boton6;}
+#mainNav { grid-area: nav;}
+#imagen { grid-area: imagen;}
+#footer { grid-area: footer;}
+
+
+/*----------------------------------------------------------------*/
+/* Defino el nombre y color de cada area del grid                 */
+/*----------------------------------------------------------------*/
+
+header, header1, header_blank, boton1, boton2, boton3, boton4, boton5, boton6, a {
+    padding-top: 30px;
+    background-color: rgb(206, 200, 200);
+  }
+
+  /*Nombre de la consultora*/
+header1 {
+    font-size: 35px;
+    text-align: left;                                                              
+    font-family: 'Audiowide', cursive; 
+    color: orangered; 
+}
+
+
+/* El punto del encabezado antes de Leantin*/
+header {
+    color:rgb(61, 60, 60);  
+    font-size: 25px;                                                                                                                          
+    text-align: right; 
+    padding-top: 40px;
+}
+
+/*Botones del menú*/
+boton1, boton2, boton3, boton4, boton5, a {
+    padding-top: 42px;   
+    width: 170px;
+    font-size: 13px;
+
+}
+
+
+/*Imagen*/
+imagen {
+    background-color: rgb(12, 25, 41); 
+    /* align-self: center; */
+    padding-top: 20px;
+}
+
+/*----------------------------------------------------------------*/
+/* Imagen con limites de tamaño                                   */
+/*----------------------------------------------------------------*/
+img {
+    width: 100%;
+    max-width:100%;
+    max-height: 100%;
+    
+  }
+
+
+/*Texto de la izquierda*/
+nav {
+    background-color: rgb(12, 25, 41); 
+    color: white;
+    font-size: 25px;
+    align-self: center; 
+    padding-left: 30px;
+}
+
+/*Pie*/
+footer {
+    background-color: rgb(71, 71, 72); 
+    color: white;
+    font-size: 17px;
+    text-align: center; 
+    align-self: center; 
+    padding-top: 10px;
+    
+}
+
+header{
+    animation: cambiarcolorpunto 15s forwards;
+}
+
+header1 {
+    animation: cambiarcolor 15s forwards;
+
+}
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 200 - 400 px                           */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 200px)  and  (max-width: 400px) {
+    .container {
+        /* Uso un atajo para defi5nir 4 filas / 2 columna */
+        grid-template-rows:  12% 13% 18% 44% 13%;  
+        grid-template-columns:  repeat(5, 20%); 
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header header1 header1 header1 header1"
+                             "boton2 boton3 boton4 boton5 boton6"
+                             "nav nav nav nav nav"
+                             "imagen imagen imagen imagen imagen"  
+                             "footer footer footer footer footer";
+                         
+    }
+
+        /*Header*/
+
+        header {
+            padding-top: 14px;
+            font-size: 15px;
+        }
+
+        header1 {
+            padding-top: 14px;
+            font-size: 14px;
+        }
+ 
+        /*Botones del menú*/
+        boton1, boton2, boton3, boton4, boton5, a {
+            padding-top: 10px;  
+            font-size: 4px;   
+            width: 100%;
+        }
+        
+
+        /*Imagen*/
+        img {
+            width: 100%;
+            max-width:200px;
+            padding-top: 10px;
+        }
+
+        /*Texto de la izquierda*/
+        nav {
+            font-size: 10px;
+            padding: 18px;    
+        }
+        /*Pie*/
+        footer {
+            background-color: rgb(71, 71, 72); 
+            font-size: 10px;
+        }
+
+}
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 400 - 600 px                           */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 400px)  and  (max-width: 600px) {
+    .container {
+        /* Uso un atajo para defi5nir 4 filas / 2 columna */
+        grid-template-rows:  12% 13% 18% 44% 13%;  
+        grid-template-columns:  repeat(5, 20%); 
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header header1 header1 header1 header1"
+                             "boton2 boton3 boton4 boton5 boton6"
+                             "nav nav nav nav nav"
+                             "imagen imagen imagen imagen imagen"  
+                             "footer footer footer footer footer";
+                         
+    }
+
+        /*Header*/
+
+        header {
+            padding-top: 18px;
+            font-size: 10px;
+        }
+
+        header1 {
+            padding-top: 14px;
+            font-size: 14px;
+        }
+ 
+        /*Botones del menú*/
+        boton1, boton2, boton3, boton4, boton5, a {
+            padding-top: 10px;  
+            font-size: 6px;   
+            width: 100%;
+        }
+        
+
+        /*Imagen*/
+        img {
+            width: 100%;
+            max-width:200px;
+            padding-top: 10px;
+        }
+
+        /*Texto de la izquierda*/
+        nav {
+            font-size: 12px;
+            padding: 20px;    
+        }
+        /*Pie*/
+        footer {
+            background-color: rgb(71, 71, 72); 
+            font-size: 9px;
+        }
+
+}
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 600 - 800px                     */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 600px)  and  (max-width: 800px) {
+    .container {
+        /* Uso un atajo para defi5nir 4 filas / 2 columna */
+        grid-template-rows:  12% 12% 18% 48% 10%;  
+        grid-template-columns: 5% repeat(5, 19%); 
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header header1 header1 header1 header1 header1"
+                            "boton2 boton2 boton3 boton4 boton5 boton6 "
+                            "nav nav nav nav nav nav"
+                            "imagen imagen imagen imagen imagen imagen "  
+                            "footer footer footer footer footer footer";
+                         
+    }
+
+        /*Header*/
+
+        header {
+            padding-top: 15px;
+            font-size: 13px;
+        }
+
+        header1 {
+            padding-top: 10px;
+            font-size: 18px;
+        }
+ 
+        /*Botones del menú*/
+        boton1, boton2, boton3, boton4, boton5,a  {
+            padding-top: 10px;  
+            font-size: 10px;   
+            width: 100%;
+        }
+
+        /*Imagen*/
+        img {
+            width: 100%;
+            max-width:200px;
+            padding-top: 10px;
+        }
+
+        /*Texto de la izquierda*/
+        nav {
+            font-size: 12px;
+            padding: 20px;
+    
+        }
+        /*Pie*/
+        footer {
+            background-color: rgb(71, 71, 72); 
+            font-size: 10px;
+        }
+
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 800 - 1000 px                    */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 800px)  and  (max-width: 1000px) {
+    .container {
+        /* Uso un atajo para defi5nir 4 filas / 2 columna */
+        grid-template-rows:  12% 12% 18% 48% 10%;   
+        grid-template-columns: 5% repeat(5, 19%); 
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header header1 header1 header1 header1 header1"
+                            "boton2 boton2 boton3 boton4 boton5 boton6"
+                            "nav nav nav nav nav nav"
+                            "imagen imagen imagen imagen imagen imagen "  
+                            "footer footer footer footer footer footer";
+                         
+    }
+
+        /*Header*/
+
+        header {
+            padding-top: 30px;
+            font-size: 15px;
+        }
+
+        header1 {
+            padding-top: 20px;
+            font-size: 25px;
+        }
+ 
+        /*Botones del menú*/
+        boton1, boton2, boton3, boton4, boton5, a {
+            padding-top: 10px;  
+            font-size: 10px;  
+            width: 100%;
+            background: rgb(206, 200, 200);
+    
+        }
+
+        /*Imagen*/
+        img {
+            width: 100%;
+            max-width:440px;
+            padding-top: 10px;
+        }
+
+        /*Texto de la izquierda*/
+        nav {
+            font-size: 16px;
+            padding: 25px;
+            padding-left: 30px;
+    
+        }
+        /*Pie*/
+        footer {
+            background-color: rgb(71, 71, 72); 
+            font-size: 10px;
+        }
+
+}
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas 1000 - 1400 px                   */
+/*----------------------------------------------------------------*/
+@media only screen and (min-width: 1000px)  and  (max-width: 1400px) {
+    .container {
+        /* Uso un atajo para definir 4 filas / 2 columna */
+        grid-template-rows:  25% 50% 17%;  
+        grid-template-columns: 2% repeat(8, 10%)  8%;   
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header header1 header1 header1 header1 header1 boton2 boton3 boton4 boton5 boton6"
+                            "nav nav nav nav imagen imagen imagen imagen imagen imagen imagen" 
+                            "nav nav nav nav imagen imagen imagen imagen imagen imagen imagen" 
+                            "footer footer footer footer footer footer footer footer footer footer footer"  ;
+                         
+    }
+
+        /*Header*/
+
+        header {
+            padding-top: 40px;
+            font-size: 15px;
+        }
+
+        header1 {
+            padding-top: 30px;
+            font-size: 25px;
+        }
+ 
+        /*Botones del menú*/
+        boton1, boton2, boton3, boton4, boton5, a {
+            padding-top: 30px;  
+            font-size: 10px; 
+            width: 100%;
+        }
+
+        /*Imagen*/
+        img {
+            width: 100%;
+            max-width:440px;
+            padding-top: 10px;
+        }
+
+        /*Texto de la izquierda*/
+        nav {
+            font-size: 16px;
+            padding: 25px;
+            padding-left: 150px;
+    
+        }
+        /*Pie*/
+        footer {
+            background-color: rgb(71, 71, 72); 
+            font-size: 10px;
+        }
+
+}
+
